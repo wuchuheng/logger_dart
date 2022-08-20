@@ -1,7 +1,7 @@
 name: wuchuheng_logger
-description: A starting point for Dart libraries or applications.
-version: 1.0.0
-# homepage: https://www.example.com
+description: This is a log library for dart.
+version: 0.0.1
+homepage: https://github.com/wuchuheng/logger_dart
 
 environment:
   sdk: '>=2.17.6 <3.0.0'
