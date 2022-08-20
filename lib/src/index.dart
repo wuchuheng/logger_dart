@@ -15,7 +15,7 @@ class Logger {
       final symbolInfo = symbol != null ? 'symbol: $symbol' : '';
 
       print(
-        '\x1B[32m INFO ${DateTime.now().toString()}: $message $file symbol: $symbolInfo \x1B[0m',
+        '\x1B[32m INFO ${DateTime.now().toString()}: $message $file $symbolInfo \x1B[0m',
       );
     }
   }
