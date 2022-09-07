@@ -1,7 +1,21 @@
 import 'package:stack_trace/stack_trace.dart';
+import 'package:wuchuheng_hooks/wuchuheng_hooks.dart';
+
+enum LoggerType { info, error }
+
+class LoggerItem {
+  final String message;
+  final LoggerType type;
+  final String? symbol;
+
+  LoggerItem({required this.message, required this.type, this.symbol});
+}
 
 class Logger {
   static bool debugger = true;
+  static final SubjectHook<LoggerItem> _subjectHook = SubjectHook();
+
+  static Unsubscribe subscribe(void Function(LoggerItem loggerItem) callback) => _subjectHook.subscribe(callback);
 
   static void info(
     String message, {
@@ -17,6 +31,13 @@ class Logger {
       print(
         '\x1B[32m INFO ${DateTime.now().toString()}: $message $file $symbolInfo \x1B[0m',
       );
+      _subjectHook.next(
+        LoggerItem(
+          message: message,
+          type: LoggerType.info,
+          symbol: symbol,
+        ),
+      );
     }
   }
 
@@ -30,6 +51,13 @@ class Logger {
 
       print(
         '\x1B[31m INFO ${DateTime.now().toString()}: $message $file $symbolInfo \x1B[0m',
+      );
+      _subjectHook.next(
+        LoggerItem(
+          message: message,
+          type: LoggerType.error,
+          symbol: symbol,
+        ),
       );
     }
   }
