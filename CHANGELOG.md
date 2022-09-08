@@ -6,3 +6,7 @@
 ## 1.0.1
 
 - feat: json serialize
+
+## 1.0.2
+
+- refactor: export files.
