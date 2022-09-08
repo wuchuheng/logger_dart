@@ -20,15 +20,18 @@ class Logger {
       final frame = frames[1];
       final file = '${frame.uri}:${frame.line}:${frame.column}';
       final symbolInfo = symbol != null ? 'symbol: $symbol' : '';
+      final dateTime = DateTime.now();
 
       print(
-        '\x1B[32m INFO ${DateTime.now().toString()}: $message $file $symbolInfo \x1B[0m',
+        '\x1B[32m INFO ${dateTime.toString()}: $message $file $symbolInfo \x1B[0m',
       );
       _subjectHook.next(
         LoggerItem(
           message: message,
           type: LoggerType.info,
           symbol: symbol,
+          file: file,
+          dateTime: dateTime,
         ),
       );
     }
@@ -41,15 +44,18 @@ class Logger {
       final frame = frames[1];
       final file = '${frame.uri}:${frame.line}:${frame.column}';
       final symbolInfo = symbol != null ? 'symbol: $symbol' : '';
+      final dateTime = DateTime.now();
 
       print(
-        '\x1B[31m INFO ${DateTime.now().toString()}: $message $file $symbolInfo \x1B[0m',
+        '\x1B[31m INFO ${dateTime.toString()}: $message $file $symbolInfo \x1B[0m',
       );
       _subjectHook.next(
         LoggerItem(
           message: message,
           type: LoggerType.error,
           symbol: symbol,
+          file: file,
+          dateTime: dateTime,
         ),
       );
     }

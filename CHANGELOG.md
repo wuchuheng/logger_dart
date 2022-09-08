@@ -10,3 +10,7 @@
 ## 1.0.2
 
 - refactor: export files.
+
+## 1.0.3
+
+- feat: Add the data type of the subscription method.

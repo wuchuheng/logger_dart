@@ -15,7 +15,13 @@ void main() {
     test('Logger Subject Test', () {
       late LoggerItem result;
       final subjectHandle = Logger.subscribe((loggerItem) => result = loggerItem);
-      final testItem = LoggerItem(message: 'first message', type: LoggerType.info, symbol: 'info symbol');
+      final testItem = LoggerItem(
+        message: 'first message',
+        type: LoggerType.info,
+        symbol: 'info symbol',
+        file: '',
+        dateTime: DateTime.now(),
+      );
       Logger.info(testItem.message, symbol: testItem.symbol);
       expect(result.message, testItem.message);
       expect(result.type, testItem.type);

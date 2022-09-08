@@ -9,8 +9,16 @@ class LoggerItem {
   final String message;
   final LoggerType type;
   final String? symbol;
+  final DateTime dateTime;
+  final String file;
 
-  LoggerItem({required this.message, required this.type, this.symbol});
+  LoggerItem({
+    required this.dateTime,
+    required this.file,
+    required this.message,
+    required this.type,
+    this.symbol,
+  });
 
   factory LoggerItem.fromJson(Map<String, dynamic> json) => _$LoggerItemFromJson(json);
 
