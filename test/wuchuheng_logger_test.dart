@@ -1,4 +1,6 @@
 import 'package:test/test.dart';
+import 'package:wuchuheng_logger/src/model/logger_item.dart';
+import 'package:wuchuheng_logger/src/model/logger_type.dart';
 import 'package:wuchuheng_logger/wuchuheng_logger.dart';
 
 void main() {

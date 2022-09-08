@@ -1,15 +1,8 @@
 import 'package:stack_trace/stack_trace.dart';
 import 'package:wuchuheng_hooks/wuchuheng_hooks.dart';
 
-enum LoggerType { info, error }
-
-class LoggerItem {
-  final String message;
-  final LoggerType type;
-  final String? symbol;
-
-  LoggerItem({required this.message, required this.type, this.symbol});
-}
+import 'model/logger_item.dart';
+import 'model/logger_type.dart';
 
 class Logger {
   static bool debugger = true;
