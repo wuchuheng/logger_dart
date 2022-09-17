@@ -14,3 +14,7 @@
 ## 1.0.3
 
 - feat: Add the data type of the subscription method.
+
+## 1.0.4
+
+- chore: updated version.
