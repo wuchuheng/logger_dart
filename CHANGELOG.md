@@ -18,3 +18,7 @@
 ## 1.0.4
 
 - chore: updated version.
+
+## 1.0.5
+
+- chore: upgrade wuchuheng_hooks

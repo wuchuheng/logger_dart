@@ -8,7 +8,8 @@ class Logger {
   static bool debugger = true;
   static final SubjectHook<LoggerItem> _subjectHook = SubjectHook();
 
-  static Unsubscribe subscribe(void Function(LoggerItem loggerItem) callback) => _subjectHook.subscribe(callback);
+  static Unsubscribe subscribe(void Function(LoggerItem loggerItem, void Function() _) callback) =>
+      _subjectHook.subscribe(callback);
 
   static void info(
     String message, {

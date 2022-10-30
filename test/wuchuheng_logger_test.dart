@@ -14,7 +14,7 @@ void main() {
 
     test('Logger Subject Test', () {
       late LoggerItem result;
-      final subjectHandle = Logger.subscribe((loggerItem) => result = loggerItem);
+      final subjectHandle = Logger.subscribe((loggerItem, _) => result = loggerItem);
       final testItem = LoggerItem(
         message: 'first message',
         type: LoggerType.info,
