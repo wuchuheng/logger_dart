@@ -1,6 +1,6 @@
 name: wuchuheng_logger
 description: This is a log library for dart.
-version: 1.0.6
+version: 1.0.7
 homepage: https://github.com/wuchuheng/logger_dart
 
 environment:
