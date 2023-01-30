@@ -1,4 +1,15 @@
-This is a log library for dart
+
+<a href="https://pub.dev/packages/wuchuheng_logger">
+    <h1 align="center"> wuchuheng_logger </h1>
+</a>
+
+<p align="center"> This is a log library for dart </p>
+
+<p align="center">
+    <a href="https://github.com/wuchuheng/logger_dart/actions/workflows/test.yml">
+        <img src="https://github.com/wuchuheng/logger_dart/actions/workflows/test.yml/badge.svg" />
+    </a>
+</p>
 
 ## Features
 
